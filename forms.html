@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Working with Forms</title>
+</head>
+<body>
+  <form name="form1" method="post">
+    <fieldset>
+      <legend>Application Forms</legend>
+      Name:<input type="text" placeholder="full name" autofocus required>
+      <br>
+      Age:<input type="number" min="13" max="35">
+      <br>
+      Address:<textarea cols="20" rows="10"></textarea>
+      <br>
+      Email:<input type="email">
+      <br>
+      Password:<input type="password">
+      <br>
+      Student ID:<input type="text" maxlength="6"><br>
+      Gender: <input type="radio" name="gender" value="male">Male
+      <input type="radio" name="gender" value="female">Female
+      <br>
+      Location:<select>
+      <option value="a">Lajpat Nagar</option>
+      <option value="b">Saket</option>
+      <option value="c">C.r Park</option>
+      <option value="d">South Extension</option>
+      <option selected>--select--</option>
+      </select>
+      <br>
+      Language Know:
+      <input type="checkbox" value="eng">English
+      <input type="checkbox" value="hin">Hindi
+      <input type="checkbox" value="oth">Others
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+      
+    </fieldset>
+  </form>    
+</body>
+</html>

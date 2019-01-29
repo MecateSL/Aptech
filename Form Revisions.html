@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Form Revision</title>
+    </head>
+    <body bgcolor="#fff">
+        <form name="form1" method="POST" action="">
+            <fieldset>
+                <legend>Student Application Form</legend>
+                <table>
+                    <tr>
+                        <td>Name:</td>
+                        <td> <input type="text" placeholder="Full Name" > </td>
+                    </tr>
+                    <tr>
+                        <td> User ID: </td>
+                        <td><input type="text" maxlength="6" required> </td>
+                    </tr>
+                    <tr>
+                        <td>Password:</td>
+                        <td><input type="password" required></td>
+                    </tr>
+                    <tr>
+                        <td>Address:</td>
+                        <td><textarea cols="21" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Location:</td>
+                        <td><input type="text" list="location" required>
+                            <datalist id="location">
+                                <option value="Lajpat Nagar"></option>
+                                <option value="Saket"></option>
+                                <option value="C.R Park"></option>
+                                <option value="South Extension"></option>
+                            </datalist>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td><input type="date" required></td>
+                    </tr>
+                    <tr>
+                        <td>Choose your Course:</td>
+                        <td>
+                            <input type="radio" name="course" value="gwd">Graphicland Web Design
+                            <br>
+                            <input type="radio" name="course" value="awd">Advance Web Design
+                            <br>
+                            <input type="radio" name="course" value="gd">Graphic Design
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Languages Known</td>
+                        <td>
+                            <input type="checkbox" value="eng">English
+                            <input type="checkbox" value="hindi">Hindi
+                            <input type="checkbox" value="oth">Others
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Upload Your Resume</td>
+                        <td><input type="file"></td>
+                    </tr>
+                    <tr>
+                        <td>Give your score</td>
+                        <td><input type="range" min="1" max="10"></td>
+                    </tr>
+                    <tr>
+                        <td>Choose a color:</td>
+                        <td><input type="color" value="#ff6452"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Clear">
+                        </td>
+                    </tr>
+                    
+                </table>
+            </fieldset>
+        </form>
+    </body>
+</html>

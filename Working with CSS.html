@@ -24,7 +24,7 @@
             }        
             body {
                 background-color: rgb(223, 223, 223);
-                background-image:url(../paint.jpg);
+                background-image:url(../../paint.jpg);
                 /* background-repeat: repeat-y; */
                 /* This is a CSS comment */
                 background-repeat: no-repeat;
@@ -38,6 +38,55 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
             /* in the above lines we are grouping slector, when you want more the one selector to have the same fortmatting, you can group them using comma (,) */
+            table {
+                background-color: rgb(102,255,255);
+                width: 50%;
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(0,102,153);
+                border-collapse: collapse /* to apply single border to table */
+            }
+            tr,td,th {
+                border-style: solid;
+                border-width: 1px;
+                border-color: rgb(0,102,153);
+                text-align: center;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 14px;
+                color: rgb(51,51,51);
+            }
+            .selector {
+                color: rgb(255, 0, 0);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .different_row {
+                background-color: rgb(255, 204, 51)
+            }
+            .italic {
+                font-style: italic;
+                font-weight: bolder;
+            }
+            a {
+                display: block; /* to make it appear like a box */
+                width: 200px;
+                height: 200px;
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(255,51,51);
+                color: rgb(0,102,102);
+                text-decoration: none
+            }
+            a>:visited {
+                background-color: rgb(0,102,255);
+            }
+            a:hover {
+                background-color: rgb(0,255,0);
+            }
+            a:active {
+                background-color: rgb(255,153,0)
+            }
         </style>
     </head>
     <body>
@@ -55,7 +104,31 @@
         <h5>This is the fifth heading</h5>
         <p>This is the fifth random paragraph of my page</p>
         <h6>This is the sixth heading</h6>
-        <p>This is the sixth random paragraph of my page</p>
+        <p class="selector">This is the sixth random paragraph of my page</p>
+
+        <table>
+            <tr>
+                <th class="selector italic">Name</th>
+                <th class="selector italic">Age</th>
+                <th class="selector italic">Subject</th>
+            </tr>
+            <tr class="different_row">
+                <td>Rohit</td>
+                <td>21</td>
+                <td>Web Design</td>
+            </tr>
+            <tr>
+                <td>Anita</td>
+                <td>20</td>
+                <td>Graphic Design</td>
+            </tr>
+            <tr class="different_row">
+                <td>Suraj</td>
+                <td>25</td>
+                <td>Web Design</td>
+            </tr>
+        </table>
+        <a href="Revision.html" target="_blank">Random Link</a>
 
 
 

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Working with CSS</title>
+        <style>
+            body{
+                background-color: rgb(37, 37, 37);
+            }
+            h1 {
+                color:rgb(197, 197, 197);
+                font-family:Arial, Helvetica, sans-serif;
+                text-align:center;
+                text-transform:uppercase;
+            }
+            p {
+                color: rgb(209, 209, 209);
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 14px;
+            }
+            .dif {
+                color: rgb(238, 137, 198);
+                font-style: italic;
+            }
+            a {
+                display: block;
+                width: 200px;
+                height: 20px;
+                padding: 10px;
+                text-align: center;
+                background-color: rgb(182, 80, 80);
+                color: rgb(255,255,255);
+                text-decoration: none;
+            }
+            /* below code shown a pseudo class selector, it selects a state of a particular selector */
+            a:visited {
+                background-color: rgb(51,102,255);
+            }
+            a:hover {
+                background-color: rgb(226, 49, 49);
+            }
+            a:active {
+                background-color: rgb(105, 16, 16)
+            }
+            p.special::first-line {
+                color: rgb(0,51,255);
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 18px;
+            }
+            p.special::first-letter {
+                font-size: 40px;
+                font-family: Verdana, Geneva, Tahoma, sans-serif
+            }
+            #box {
+                width: 400px;
+                height: 300px;
+                background-color: rgb(255,255,153);
+                padding: 20px;
+                border-left-style: solid;
+                text-align: center;
+                border-left-width: 5px;
+                border-left-color: rgb(255,0,0);
+                border-top: dashed 5px rgb(255,0,0);
+                margin-left: 40px;
+            }
+            #box:hover {
+                background-color: aqua;
+                padding: 50px;
+            }
+            #box h3 {
+                color: rgb(255,0,0);
+                font-family: Arial, Helvetica, sans-serif
+            }
+            #box p {
+                color: chocolate;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 16px;
+                
+            }
+            hr {
+                width: 200px;
+                border-color: rgb(88, 88, 88)
+                
+            }
+            #bigbox {
+                width: 800px;
+                height: 602px;
+                background-color: rgb(51,102,255);
+            }
+            .topbox {
+                width: 760px;
+                height: 100px;
+                background-color: rgb(255,205,51);
+                padding: 20px;
+            }
+            .leftbox {
+                padding: 10px;
+                width: 280px;
+                height: 200px;
+                background-color: rgb(255,51,151);
+                float: left;
+            }
+            .rightbox {
+                padding: 10px;
+                width: 480px;
+                height: 200px;
+                background-color: bisque;
+                float: right;
+            }
+            .blbox {
+                padding: 5px;
+                width: 243px;
+                height: 220px;
+                background-color: cadetblue;
+                clear: both;
+                float: left;
+                margin: 5px 0px 5px 5px;
+                border: 1px solid rgb(197, 197, 197);
+            }.bcbox {
+                padding: 5px;
+                margin: 5px;
+                width: 258px;
+                height: 220px;
+                background-color: rgb(30, 57, 58);
+                float:left;
+                border: 1px solid rgb(197, 197, 197);
+            }
+            .brbox {
+                padding: 5px;
+                margin: 5px 5px 5px 0px;
+                width: 243px;
+                height: 220px;
+                background-color: rgb(160, 108, 95);
+                float: right;
+                border: 1px solid rgb(197, 197, 197);
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>This page is designed using HTML and CSS</h1>
+        <hr>
+        <p class="dif">
+            On the Insert tab, the galleries include items that are designed to coordinate with the overall look of your document. You can use these galleries to insert tables, headers, footers, lists, cover pages, and other document building blocks. When you create pictures, charts, or diagrams, they also coordinate with your current document look.
+        </p>
+        <p style="color:rgb(255,0,0);font-family: 'Courier New', Courier, monospace">
+            You can easily change the formatting of selected text in the document text by choosing a look for the selected text from the Quick Styles gallery on the Home tab. You can also format text directly by using the other controls on the Home tab. Most controls offer a choice of using the look from the current theme or using a format that you specify directly.
+        </p>
+        <a href="./Working with CSS.html">Previews file</a>
+        <p class="special">To change the overall look of your document, choose new Theme elements on the Page Layout tab. To change the looks available in the Quick Style gallery, use the Change Current Quick Style Set command. Both the Themes gallery and the Quick Styles gallery provide reset commands so that you can always restore the look of your document to the original contained in your current template.</p>
+        <div id="box">
+            <h3>This is a box</h3>
+            <hr>
+            <p>This box is designed using ID selector</p>
+        </div>
+        <hr>
+        <div id="bigbox">
+            <div class="topbox">
+                <h1 style="color:black">The Box Model</h1>
+            </div>
+            <div class="leftbox"><p style="color:black">Left Box</p></div>
+            <div class="rightbox"><p style="color:black">Right Box</p></div>
+            <div class="blbox">
+                <p style="color: black">Bottom Left Box</p>
+            </div>
+            <div class="bcbox">
+                <p style="color:black">Bottom Center Box</p>
+            </div>
+            <div class="brbox">
+                <p style="color:black">Bottom Right Box</p>
+            </div>
+        </div>
+
+    </body>
+</html>

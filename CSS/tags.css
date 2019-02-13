@@ -1,0 +1,436 @@
+body {
+    background-image: url(../../../Lotus.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+#wrapper {
+    width: 900px;
+    height: auto;
+    margin: 0 auto 0 auto;
+}
+header {
+    width: 860px;
+    padding: 20px;
+    height: 180px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border-radius:  10px 10px 0 0;
+    border-bottom: 5px solid rgb(0,51,102);
+    text-align: center;
+}
+header h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    text-transform: uppercase  ;
+    text-shadow: 1px 1px 5px rgb(51,51,51,0.5);
+}
+input[type="search"] {
+    border: solid 2px rgb(0,51,204);
+    border-radius: 50px;
+    width: 400px;
+    height: 50px;
+    text-align: center;
+}
+input[type="button"] {
+    background-color: rgb(0,51,204);
+    color: rgb(255,255,255);
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 20px;
+    border: none;
+}
+nav {
+    width: 100%;
+    height: auto;
+    background-color: rgb(0,51,102)
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 160px;
+    padding: 10px;
+    height: auto;
+    color: white;
+    background-color: rgb(0,51,102);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 500ms ease-in-out
+}
+nav ul li a:hover {
+    background-color: rgb(204,204,204);
+    color: rgb(51, 51, 51);
+    font-weight: bold;
+}
+nav ul li ul {
+    display: none;
+}
+nav ul li:hover ul {
+    display: block;
+    z-index: 100;
+    position: absolute;
+    border: solid 1px rgb(204, 204, 204);
+}
+nav ul li:hover ul li {
+    float: none;
+}
+nav ul li:hover ul li ul {
+    display: none;
+}
+nav ul li ul li:hover ul {
+    display: block;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -40px;
+    border: solid 1px rgb(204, 204, 204);
+}
+.anim_box {
+    width: 900px;
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+}
+.box1 {
+    width: 200px;
+    height: auto;
+    padding: 10px;
+    background-color: rgb(0, 0, 153);
+    color: rgb(255, 255, 255);
+    position: relative;
+    left: 0;
+    top: 40px;
+    animation-name: anim1;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anim1 {
+    from {
+        background-color: rgb(255, 153, 0);
+    }
+    to {
+        background-color: rgb(0, 204, 0);
+    }
+}
+.box2 {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color:rgb(0, 102, 204);
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    animation-name: anim2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: normal;
+}
+@keyframes anim2 {
+    0% {
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 102, 204);
+    }
+    25% {
+        left: 800px;
+        top: 0;
+        background-color: rgb(255, 204, 0);
+    }
+    50% {
+        left: 800px;
+        top: 100px;
+        background-color: rgb(153, 0, 0);
+    }
+    75% {
+        left: 0px;
+        top: 100px;
+        background-color: rgb(51, 204, 0);
+    }
+    100% {
+        left: 0;
+        top: 0;
+        background-color: rgb(0, 102, 204);
+    }
+}
+.box3 {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color:rgb(0, 102, 204);
+    text-align: center;
+    position: relative;
+    animation-name: anim3;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+@keyframes anim3 {
+    0% {
+        left: 0;
+        top: 0;
+    }
+    100% {
+        left: 800px;
+        top: 0;
+    }
+}
+.box4 {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    background-color:rgb(0, 102, 204);
+    text-align: center;
+    position: relative;
+    animation-name: anim4;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes anim4 {
+    0% {
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+    }
+    50% {
+        left: 700px;
+        top: 50px;
+        transform: rotate(260deg);
+    }
+    100% {
+        left: 0;
+        top: 50px;
+        transform: rotate(0deg);
+    }
+}
+.slideshow {
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+}
+.slideshow .slide img {
+    float: left;
+    width: 20%;
+    height: auto;
+}
+.slideshow .slide {
+    width: 500%;
+    height: 400px;
+    position: relative;
+    left: 0;
+    animation:gallery 30s ease-out infinite;
+}
+@keyframes gallery {
+    0% {left: 0;}
+    20% {left: 0;}
+    25% {left: -100%;}
+    45% {left: -100%;}
+    50% {left: -200%;}
+    70% {left: -200%;}
+    75% {left: -300%;}
+    95% {left: -300%;}
+    100% {left: -400%;}
+}
+.textarea {
+    width: 900px;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    text-align: center;
+}
+.textarea h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 51, 102);
+}
+.textarea .intro, .textarea .team, .textarea .work {
+    padding: 10px;
+    margin: 10px;
+    width: 260px;
+    height: 350px;
+    background-color: rgb(204, 204, 204);
+    float: left;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+}
+.textarea .intro:hover, .textarea .team:hover, .textarea .work:hover {
+    box-shadow: 0 0 8px rgb(51, 51, 51);
+}
+.textarea .intro img, .textarea .team img, .textarea .work img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 5px;
+    border: solid 2px rgb(255, 255, 255);
+}
+
+.intro h3, .team h3, .work h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(102, 102, 102);
+}
+.intro p, .team p, .work p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(51, 51, 51);
+    text-align: justify;
+}
+section {
+    width: 580px;
+    padding: 10px;
+    height: 450px;
+    float: left;
+    background-color: white;
+}
+article {
+    width: 540px;
+    padding: 10px;
+    height: auto;
+    margin: 10px;
+    border: 1px solid rgb(230, 230, 230);
+    box-shadow: 0 0 20px rgb(225, 225, 225);
+    border-radius: 5px;
+}
+article h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0, 51, 102);
+}
+article p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    color: rgb(51, 51, 51);
+}
+.fadein {
+    width: 300px;
+    height: 184px;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.fadein img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    animation: fade 12s infinite ease-in alternate;
+}
+@keyframes fade {
+    0%{opacity:1;}
+    15%{opacity:1;}
+    20%{opacity:0;}
+    80%{opacity:0;}
+    85%{opacity:1;}
+    100%{opacity:1;}
+}
+.fadein img:nth-of-type(1){
+    animation-delay: 9s
+}
+.fadein img:nth-of-type(2){
+    animation-delay: 6s;
+}
+.fadein img:nth-of-type(3){
+    animation-delay: 3s;
+}
+.fadein img:nth-of-type(4){
+    animation-delay: 0s;
+}
+
+hr {
+    clear: both;
+    width: 80%;
+}
+/* .textarea .work {
+    transition: all 0.3s ease-out;
+}
+.textarea .work:hover {
+    box-shadow: 0 0 8px rgb(51, 51, 51);
+} */
+.article {
+    width: 600px;
+    clear: both;
+    float: left;
+    margin-top: 20px;
+}
+.content {
+    margin: 0 auto 0 auto;
+    width: 550px;
+
+}
+.image {
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgb(220, 220, 220);
+}
+.content img {
+    border-radius: 15px;
+    width: 530px;
+    height: auto;
+    padding: 10px;
+}
+.sidebar {
+    margin-top: 20px;
+    width: 200px;
+    float: left;
+    text-align: left;
+}
+aside {
+    width: 280px;
+    height: 450px;
+    padding: 10px;
+    background-color: #fff;
+    float: right;
+    color: rgb(51, 51, 51);
+    font-size: 14px;
+    text-align: left;
+}
+aside h3 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(0,51,102);
+}
+input,textarea,select {
+    border: solid 1px rgb(0, 153, 204);
+}
+footer {
+    width: 880px;
+    padding: 10px;
+    height: auto;
+    clear: both;
+    float: left;
+    background-color: rgb(0, 51, 102);
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+.aboutus {
+    width: 860px;
+    height: auto;
+    padding: 20px;
+    background-color: #fff;
+}
+.aboutus img {
+    width: 500px;
+    height:300px;
+    border: solid 5px rgb(204, 204, 204);
+    margin: 5PX;
+    float: right;
+}
+.aboutus h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(0, 51, 102);
+}
+.aboutus p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(51, 51, 51);
+}

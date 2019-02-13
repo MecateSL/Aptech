@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/3725894/how-to-change-default-image-thumbnail-sizes-in-wordpress
+https://www.templatemonster.com/help/wordpress-how-to-change-image-dimensions-on-blog-pages.html
+https://www.sitepoint.com/css3-transform-background-image/
+https://teamtreehouse.com/community/blur-only-background/

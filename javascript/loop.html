@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For Loop</title>
+</head>
+<body>
+    <p>       FOR LOOP = it can execute a block of code the times you want. Loops are usefull if you want to run the same again and again and each time with a new value.     </p>
+
+    <p id="display"> </p>
+
+    <label for="nl">Enter a number:</label>
+    <input type="text" id="nl" name="nl">
+    <input type="button" value="show" onclick="demo1()">
+
+    <p id="table"></p>
+
+    <script>
+        var txt = "";
+
+        for (var i=0;i<=10;i++) {
+            txt += "The number is "+i+"<br>";
+        document.getElementById("display").innerHTML = txt;
+        }
+
+        function demo1() {
+            var inputnum = parseInt(document.getElementById("nl").value);
+
+            var result = "";
+
+            var disp = document.getElementById("table");
+
+            for(var i=1;i<=12;i++) {
+                result = inputnum*i;
+                disp.innerHTML += inputnum+" x "+i+" = "+result+"<br>";
+            }
+        }
+    </script>
+</body>
+</html>

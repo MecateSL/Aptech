@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array</title>
+</head>
+<body>
+    <p>Array - is a colection of values stored with a single variable. These values are referenced with a common array name (that is the variable name). The values of an array can be accessed using index number. The index number determines the position of an element in an array list.</p>
+
+    <p id="demo1"> </p>
+
+    <p id="demo2"> </p>
+
+    <p id="demo3"> </p>
+
+    <p id="demo4"> </p>
+
+    <p id="demo5"> </p>
+
+    <p id="demo6"> </p>
+
+    <input type="button" value="Calculate your average score" onclick="demo7()">
+
+    <hr>
+
+    <input type="button" value="Previous" onclick="prev()">
+    <img src="../../img/sunset.jpg" alt="" id="myimg" width="400" height="auto">
+    <input type="button" value="Next" onclick="next()">
+
+    <script>
+        var colors = ["orange","red","green","blue","pink","yellow"]
+        document.getElementById("demo1").innerHTML = colors.length;
+
+        document.getElementById("demo2").innerHTML = colors.indexOf("blue");
+
+        document.getElementById("demo3").innerHTML = colors[2];
+
+        colors.sort()
+        document.getElementById("demo4").innerHTML = colors;
+
+        colors.pop()
+        document.getElementById("demo5").innerHTML = colors;
+
+        colors.push("white")
+        document.getElementById("demo6").innerHTML = colors;
+
+        function demo7() {
+            var sum = 0;
+            var marks = new Array(5);
+            var avg;
+            for (var i=0;i<marks.length;i++) {
+                marks[i] = parseFloat(prompt("Enter your score","subject score"));
+                sum = sum+marks[i];
+            }
+            avg = sum/5;
+            alert("Your average score is "+avg);
+        }
+        var gallery = document.getElementById("myimg");
+        var pics = ["../../img/sunset.jpg","../../img/penitas.jpeg","../../img/san-juan.jpg","../../img/leon.jpeg","../../img/chicken-bus-nicaragua.jpg"];
+        var current_img = 0;
+        var num_img = 4;
+        function prev() {
+            if(current_img>0) {
+                current_img = current_img - 1;
+                gallery.src = pics[current_img]
+            }
+            else {
+                alert("Your are on the First Image");
+            }
+        }
+        function next() {
+            if(current_img<num_img) {
+                current_img = current_img + 1;
+                gallery.src = pics[current_img]
+            }
+            else {
+                alert("You are on the last image");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>For/in loop</title>
+</head>
+<body>
+    <p>FOR/IN LOOP statement loops through the propierties of an object </p>
+
+    <label for="n1">First Name:</label>
+    <input type="text" id="n1">
+    <br>
+    <label for="n2">Last Name:</label>
+    <input type="text" id="n2">
+    <br>
+    <label for="n3">Age:</label>
+    <input type="number" id="n3">
+    <br>
+    <label for="n4">Country:</label>
+    <input type="text" id="n4">
+    <br>
+    <input type="button" value="Submit" onclick="demo1()">
+
+    <script>
+        function demo1() {
+            var fname = document.getElementById("n1").value;
+            var lname = document.getElementById("n2").value;
+            var age = parseInt(document.getElementById("n3").value);
+            var cname = document.getElementById("n4").value;
+
+            var person = {x:fname,y:lname,z:age,c:cname};
+
+            var p;
+
+            var txt = "";
+
+            for(p in person) {
+                txt += person[p]+" ";
+            }
+            alert("you have entered details "+txt);
+        }
+    </script>
+</body>
+</html>

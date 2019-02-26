@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Boolean</title>
+</head>
+<body>
+    Enter age:
+    <input type="text" id="a1">
+    <input type="button" value="submit" onclick="test1()">
+    <br><br>
+    Enter Email:
+    <input type="text" id="e1">
+    <input type="button" value="login" onclick="test2()">
+    <p id="msg"></p>
+<script>
+    function test1() {
+        var age = parseInt(document.getElementById("a1").value);
+        var result = (age>=25 && age<=45)?"You can apply":"You cannot apply";
+        alert(result);
+    }
+    function test2() {
+        var mail = document.getElementById("e1").value;
+        var x = mail.indexOf("0");
+        var y = (mail!="" && x>0)?"Thank you":"Invalid Input";
+        document.getElementById("msg").innerHTML = y;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Sitch Case</title>
+</head>
+<body id="b1">
+    <p>Switch Case Statement - A program becomes quite difficult to understand when there are multiple - if else statements. To simplify the coding and to avoid using multiple IF, we can use a different approach to the same logic. A switch case allows you to execute different statements depending on the value of the variable.</p>
+
+    Enter your location:
+    <input type="text" id="t1">
+    <input type="button" value="submit" onclick="demo1()">
+    <br>
+    <br>
+
+    Choose a color:
+    <select id="colors" onchange="demo2()">
+        <option value="red">Red</option>
+        <option value="teal">Teal</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="pink">Pink</option>
+        <option selected>--select--</option>
+    </select>
+    <br>
+    <hr>
+    <br>
+
+    <img src="../../img/leon.jpeg" alt="Nicaragua" id="pics" width="400" height="300">
+    Choose an Image:
+    <select id="d1" onchange="demo3()">
+        <option value="img1">Image 1</option>
+        <option value="img2">Image 2</option>
+        <option value="img3">Image 3</option>
+        <option selected>--select--</option>
+    </select>
+    <input type="button" value="Apply" onclick="demo3()">
+
+    <script>
+        function demo1() {
+            var location = document.getElementById("t1").value;
+            switch(location){
+                case "delhi":
+                alert("We have 4 branches in Delhi.");
+                break;
+                
+                case "mumbai":
+                alert("We have 2 branches in Mumbai.");
+                break;
+                
+                case "kolkata":
+                alert("We have 1 branches in Kolkata.");
+                break;
+                
+                case "chennai":
+                alert("We have 3 branches in Chennai.");
+                break;
+                
+                default:
+                alert("We do not have any branches in your mentioned location");
+                break;
+            }
+        }
+        function demo2() {
+            var col = document.getElementById("colors").value;
+            var page = document.getElementById("b1")
+            switch(col) {
+                case "red":
+                page.style.backgroundColor = "tomato";
+                break;
+
+                case "teal":
+                page.style.backgroundColor = "teal";
+                break;
+
+                case "blue":
+                page.style.backgroundColor = "blue";
+                break;
+
+                case "yellow":
+                page.style.backgroundColor = "yellow";
+                break;
+
+                case "pink":
+                page.style.backgroundColor = "pink";
+                break;
+
+                default:
+                page.style.backgroundColor = "white";
+                break;
+            }
+        }
+        function demo3() {
+            var y = document.getElementById("d1").value;
+            var x = document.getElementById("pics");
+            switch(y) {
+                case "img1":
+                x.src =  "../../img/san-juan.jpg";
+                break;
+
+                case "img2":
+                x.src = "../../img/sunset.jpg";
+                break;
+
+                case "img3":
+                x.src = "../../img/penitas.jpeg";
+                break;
+
+                default:
+                x.src = "../../img/leon.jpeg";
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

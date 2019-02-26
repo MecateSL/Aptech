@@ -1,0 +1,222 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background-color:#CCC;
+}
+.italic{
+	font-style:italic;
+}
+.small{
+	font-size:12px;
+}
+header{
+	margin-bottom:10px;
+}
+section{
+	display:block;
+}
+#wrapper{
+	width:900px;
+	margin:auto;
+}
+#menu{
+	width:200px;
+	height:200px;
+	background-color:rgb(51,51,51);
+	float:left;
+}
+#menu ul{
+	list-style:none;
+	margin:0;
+	padding:0;/* We remove the default margin and padding of lists */
+}
+#menu ul li a{
+	display:block;
+	padding:10px;
+	width:180px;
+	height:19px;
+	border-bottom:dotted 1px rgb(51,51,51);
+	background-color:#900;
+	color:#FFF;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+	/* Older browser compatibility for transitions */
+	-moz-transition:all 1s ease-out;
+	-webkit-transition:all 1s ease-out;
+	-ms-transition:all 1s ease-out;
+	-o-transition:all 1s ease-out;
+	/* Transition properties for current browsers */
+	transition-property:all;
+	transition-duration:1s;
+	transition-timing-function:ease-out;
+}
+#menu ul li a:hover{
+	background-left:#C00;
+	border-left:solid 50px rgb(51,51,51);
+	width:130px;
+}
+/* Submenu */
+#menu ul li{
+	position:relative;
+}
+#menu ul li ul{
+	display:none;
+}
+#menu ul li:hover ul{
+	z-index:100;
+	display:block;
+	position:absolute;
+	left:100%;
+	top:0;
+	border:solid 1px rgb(204,204,204);
+}
+#menu ul li:hover ul li{
+	float:none;/* Removes the previosly declared float that made our main list horizontal */
+}
+.clear-alignment{
+	clear:both;
+}
+.red{
+	color:#F00;
+}
+.box{
+	margin:5px;
+	padding:5px;
+	width:280px;
+	display:block;
+	position:relative;
+	float:left;
+	text-align:center;
+}
+.box-middle{
+	width:278px;
+	border-left:1px dashed #999;
+	border-right:1px dashed #999; 
+}
+.box img{
+	width:160px;
+	height:160px;
+	border-radius:50%;
+}
+/* Image Slideshow */
+#carousel-slide{
+	width:700px;
+	height:240px;
+	overflow:hidden; /* Hides the extra images inside the slide div */
+}
+#carousel-slide .slides {
+	width:500%;
+	height:240px;
+	position:relative;
+	left:0;
+	animation:gallery-slider 30s ease-out infinite; /* animation:name duration animation-timing iteration */
+}
+#carousel-slide .slides img{
+	float:left; /* Places images in horizontal format */
+	width:20%; /* It is 20% because there are 5 images so 100%/5 = 20% */
+	height:240px;
+}
+@keyframes gallery-slider{
+	0%{
+		left:0;
+	}
+	20%{
+		left:0;
+	}
+	25%{
+		left:-100%;
+	}
+	45%{
+		left:-100%;
+	}
+	50%{
+		left:-200%;
+	}
+	70%{
+		left:-200%;
+	}
+	75%{
+		left:-300%;
+	}
+	95%{
+		left:-300%;
+	}
+	100%{
+		left:-400%;
+	}
+}
+.slides-fade{
+	width:500px;
+	height:240px;
+	position:relative;
+	float:left;
+}
+.slides-fade img{
+	width:500px;
+	height:240px;
+	float:left;
+	position:absolute;
+	left:0; /* position absolute and left 0 is applied to make images appear on top of each other */
+	animation:gallery-fade 12s infinite ease-in alternate;
+}
+@keyframes gallery-fade{
+	0%{
+	opacity:1;
+	}
+	15%{
+	opacity:1;
+	}
+	20%{
+	opacity:0;
+	}
+	80%{
+	opacity:0;
+	}
+	85%{
+	opacity:1;
+	}
+	100%{
+	opacity:1;
+	}
+}
+.slides-fade img:nth-of-type(1){
+	animation-delay:9s;
+}
+.slides-fade img:nth-of-type(2){
+	animation-delay:6s;
+}
+.slides-fade img:nth-of-type(3){
+	animation-delay:3s;
+}
+.slides-fade img:nth-of-type(4){
+	animation-delay:0s;
+}
+.paragraph{
+	padding-left:10px;
+	padding-right:10px;
+	width:380px;
+	height:240px;
+	position:relative;
+	display:block;
+	float:left;
+	top:0;
+	text-align:justify;
+}
+.paragraph-full{
+	padding-left:10px;
+	padding-right:10px;
+	width:880px;
+	position:relative;
+	display:block;
+	float:left;
+	top:0;
+}
+footer{
+	width:880px;
+	padding:10px;
+	margin-top:10px;
+	border-top:4px solid #F30;
+	float:left;
+}

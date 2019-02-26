@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do while loop</title>
+</head>
+<body>
+    <p>DO WHILE LOOP  is a similar to while loop, the only difference is that the condition check happens at the end, that is why the loop will be executed at least once even is the condition is not true.</p>
+
+    <p id="display"></p>
+
+    <input type="button" value="Quiz" onclick="quiz()">
+    <script>
+        var i= 0;
+        var txt = "";
+
+        do {
+            txt += "The count is "+i+"<br>";
+            i++;
+
+            document.getElementById("display").innerHTML = txt;
+        }
+        while(i<=10);
+
+        function quiz() {
+            var ans = "";
+            do {
+                ans = prompt("Which is the capital city of India?","your answer");
+            }
+            while(ans!="Delhi")
+            alert("You got the correct answer");
+        }
+    </script>
+</body>
+</html>

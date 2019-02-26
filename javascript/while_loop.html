@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>While Loop</title>
+</head>
+<body>
+    <p>While Loop - it executes a block of code as long as a given condition remains true. The while begins with keyword -while wich followed by block containing a boolean condition. If the condition is true the block of statement withinthe while loop are executed.</p>
+    <p id="display"></p>
+    
+    <input type="button" value="Add" onclick="demo1()">
+    
+    <script>
+        var x ="";
+        var i = 0;
+
+        while(i<=10) {
+            x += "The number is "+i+"<br>";
+            i++;
+            document.getElementById("display").innerHTML = x;
+        }
+
+        function demo1() {
+            var a = 0;
+            var i = 0;
+
+            while(1<=10) {
+                a = a+i;
+                i++;
+            }
+            alert("The sum of first 10 numbers is "+a);
+        }
+    </script>
+</body>
+</html>

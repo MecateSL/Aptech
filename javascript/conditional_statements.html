@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Boolean</title>
+    <style>
+    #panel {
+        width: 300px;
+        height: auto;
+        padding: 10px;
+        background-color: gray;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: center;
+        color: white;
+        cursor: pointer;
+    }
+    #container {
+        width: 300px;
+        height: 1px;
+        padding: 10px;
+        background-color: orangered;
+        overflow: hidden;
+        transition: height 1s ease-in-out;
+    }
+    </style>
+</head>
+<body>
+    <p>
+        IF condition - it executes a block of statement based on a logical boolean condition. If the condition is true then only the block following the condition will be executed.
+    </p>
+    Enter Quantity:
+    <input type="text" id="q1">
+    <input type="button" value="submit" onclick="demo1()">
+    <hr>
+    <p>IF ELSE condition - sometimes it is required to define a block of statement to be executed even when the condition is false and when  it is true</p>
+    Enter name:
+    <input type="text" id="n1">
+    <input type="button" value="submit" onclick="demo2()">
+    <p id="greet"></p>
+    <hr>
+    <input type="button" value="Change" onclick="demo3()">
+    <input type="button" value="Hide" onclick="demo4()" id="b1">
+    <div id="box" style="width:300px; height:200px; background-color:lime; display: block;"></div>
+    <hr>
+    <div id="panel" onclick="demo5()">CLICK</div>
+    <div id="container"></div>
+    <hr>
+    <p>IF ELSE IF = it allows you to check multiple conditions and specify different block to be executed for each condition</p>
+    Enter Age:
+    <input type="text" id="userage">
+    <input type="button" value="submit" onclick="demo6()">
+    <p id="disp"> </p>
+    <hr>
+    Enter your name:
+    <input type="text" id="username">
+    <input type="button" value="Login" onclick="demo7()">
+<script>
+    // If condition
+    function demo1() {
+        var x = document.getElementById("q1").value;
+        if(x<1 || isNaN(x)) {
+            alert("invalid input")
+        }
+        
+    }
+    function demo2() {
+        var user = document.getElementById("n1").value;
+        var d = new Date();
+        var t = d.getHours();
+        if(t<12) {
+            document.getElementById("greet").innerHTML = "Good Morning "+user;
+        }
+        else {
+            document.getElementById("greet").innerHTML = "Good Day "+user;
+        }
+    }
+    function demo3() {
+        var a = document.getElementById("box");
+        if(a.style.backgroundColor=="lime" || a.style.backgroundColor == "") {
+            a.style.backgroundColor = "yellow";
+        }
+        else {
+            a.style.backgroundColor = "lime";
+        }
+    }
+    function demo4() {
+        var x = document.getElementById("box");
+        var y = document.getElementById("b1");
+        if(x.style.display == "block" || x.style.display == "") {
+            x.style.display = "none";
+            y.value = "show";
+        }
+        else {
+            x.style.display = "block";
+            y.value = "Hide";
+        }
+    }
+    function demo5() {
+        var x = document.getElementById("container");
+        if(x.style.height == "1px" || x.style.height == "") {
+            x.style.height = "400px";
+        }
+        else {
+            x.style.height = "1px";
+        }
+    }
+    function demo6() {
+        var age = parseInt(document.getElementById("userage").value);
+        if(age<25) {
+            document.getElementById("disp").innerHTML = "You are too young";
+        }
+        else if(age>=25 && age<=45) {
+            document.getElementById("disp").innerHTML = "Congratulations, you can apply";
+        }
+        else {
+            document.getElementById("disp").innerHTML = "You are too old";
+
+        }
+    }
+    function demo7() {
+        var user = document.getElementById("username").value;
+        var d = new Date();
+        var t = d.getHours();
+        if(t<12) {
+            alert("Good Morning "+user);
+        } 
+        else if(t>=12 && t<=16) {
+            alert("Good Afternoon "+user);
+        }
+        else {
+            alert("Good Evening "+user);
+        }
+    }
+</script>
+</body>
+</html>

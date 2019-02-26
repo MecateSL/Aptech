@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	background-color:#F4FFFF;
+}
+.wrapper {
+	width:900px;
+	margin:0 auto 0 auto;
+}
+.submenu h2 {
+	color:#FF4246;
+	font-style:italic;
+	padding:10px 0 5px 10px;
+	margin:20px 0 0 0;
+}
+.submenu ul {
+	display:block;
+	list-style:none;
+	float:left;
+	margin:0;
+	padding:0 0 0 10px;
+}
+.submenu ul li {
+	display:block;
+	width:auto;
+	height:20px;
+	float:left;
+	margin-right:10px;
+}
+.menu {
+	clear:both;
+	border-top:2px solid #F00;
+	margin-top:30px;
+
+}
+.menu ul {
+	display:block;
+	list-style:none;
+	float:left;
+	margin:0;
+	padding:0 0 0 0px;
+	width:200px;
+	height:auto;
+	text-align:center;
+	z-index:100;
+}
+.menu ul li {
+	width:180px;
+	height:30px;
+	padding:10px;
+	border-bottom:1px solid #FFFFFF;
+	background-color:#999;
+	color:#FFF;
+	align-items:center;
+	justify-content:center;
+	display:flex;
+}
+.menu ul li ul {
+	display: none;
+}
+.menu ul li:hover ul {
+	display: block;
+	position:absolute;
+	clear:both;
+	float:left;
+	margin: -28px 0 0 191px;
+}
+.container{
+	width:700px;
+	height:305px;
+	overflow:hidden;
+}
+.slide {
+	width:500%;
+	height:100%;
+	left:0;
+	animation:swipe 10s ease-in-out infinite;
+	position:relative;
+	display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.slide img {
+	width:20%;
+	height:auto;
+	float:left;
+}
+@keyframes swipe {
+	0%{left:0}
+	20%{left:0}
+	25%{left:-700px}
+	45%{left:-700px}
+	50%{left:-1400px}
+	70%{left:-1400px}
+	75%{left:-2100px}
+	95%{left:-2100px}
+	100%{left:-2800px}		
+}

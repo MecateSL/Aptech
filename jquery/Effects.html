@@ -5,8 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>jQuery Effects</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    
+    <div class="box1" style="width:200px; height:200px; background-color:rgb(0, 204, 255);"></div>
+    <br>
+    <input type="button" value="Hide" id="b1">
+    <input type="button" value="Show" id="b2">
+    <input type="button" value="toggle" id="b3">
+    <hr>
+    <br>
+    <div class="box2" style="background-color:rgb(255, 102, 51); width:200px; height:200px; border: 1px solid rgb(0, 51, 153);"></div>
+    <br>
+    <input type="button" value="Fade Out" id="a1">
+    <input type="button" value="Fade In" id="a2">
+    <input type="button" value="Fade Toggle" id="a3">
+    <input type="button" value="Fade To" id="a4">
+    <hr>
+    <br>
+    <input type="button" value="Slide Up" id="c1">
+    <input type="button" value="Slide Down" id="c2">
+    <br>
+    <br>
+    <div id="c3" style="background-color:rgb(255, 204, 0); width:300px; height:20px; padding: 10px; text-align: center; cursor: pointer;">Slide Toggle</div>
+    <br>
+    <div class="box3" style="background-color:rgb(153,153,153); width:300px; height:300px;"></div>
+
+    <script>
+        $(document).ready(function(e) {
+            $("#b1").click(function() {
+                $(".box1").hide();
+            });
+            $("#b2").click(function() {
+                $(".box1").show("slow");
+            });
+            $("#b3").click(function() {
+                $(".box1").toggle(100);
+            });
+            $("#a1").click(function() {
+                $(".box2").fadeOut();
+            });
+            $("#a2").click(function() {
+                $(".box2").fadeIn("slow");
+            });
+            $("#a3").click(function() {
+                $(".box2").fadeToggle(10000);
+            });
+            $("#a4").click(function() {
+                $(".box2").fadeTo("slow",0.5);
+            });
+            $("#c1").click(function() {
+                $(".box3").slideUp();
+            });
+            $("#c2").click(function() {
+                $(".box3").slideDown();
+            });
+            $("#c3").click(function() {
+                $(".box3").slideToggle();
+            });
+        });
+    </script>
 </body>
 </html>

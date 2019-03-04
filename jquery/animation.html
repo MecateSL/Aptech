@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animation javascript</title>
+</head>
+<body onload="myloop()">
+    <img src="../../img/leon.jpeg" alt="" id="myimg" width="400" height="300">
+
+    <script>
+        var x = document.getElementById("myimg");
+        var pics = ["../../img/leon.jpeg","../../img/sunset.jpg","../../img/san-juan.jpg","../../img/penitas.jpeg","../../img/beach.jpg"];
+
+        var i = 0;
+        function myloop() {
+            if(i>(pics.length - 1)) {
+                i=0;
+            }
+            x.src = pics[i];
+            i++;
+            loopTimer = setTimeout(myloop,4000);
+        }
+    </script>
+</body>
+</html>

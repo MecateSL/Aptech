@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript Errors</title>
+</head>
+<body>
+    <p id="demo"> </p>
+    <label for="user">User Id:</label>
+    <input type="text" id="user">
+    <br>
+    <label for="pwd1">Password:</label>
+    <input type="password" id="pwd1">
+    <br>
+    <label for="pwd2">Confirm Password:</label>
+    <input type="password" id="pwd2">
+    <br>
+    <input type="button" value="login" onclick="test()">
+    <p id="display"> </p>
+
+    <script>
+        // var x = 5;
+        // var y = 6;
+        // try {
+        //     addert(x+y);
+        // }
+        // catch(err) {
+        //     document.getElementById("demo").innerHTML = err.message;
+        // }
+        function test() {
+            var psw1 = document.getElementById("pwd1").value;
+            var psw2 = document.getElementById("pwd2").value;
+            var userid = document.getElementById("user").value;
+            var message = document.getElementById("display");
+
+            message.innerHTML = "Welcome";
+            var space = psw1.indexOf(" ");
+            var len = psw1.length;
+
+            try {
+                if(userid == "") throw "Please Give an user id";
+                if(psw1 == "" || psw2 == "") throw "Please fill the passwords";
+                if(psw1 != psw2)  throw "Passwords do not match";
+                if(space>=0) throw "Do not put space in your password";
+                if(len<=8) throw "Password too short"
+            }
+            catch(err) {
+                message.innerHTML = err;
+            }
+        }
+    </script>
+</body>
+</html>

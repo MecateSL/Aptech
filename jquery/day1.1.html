@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Working with jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="p1">Place your mouse the paragraph</p>
+    <label for="nm">Enter Name:</label>
+    <input type="text" id="nm">
+    
+    <h1>Working with jQuery</h1>
+    <p>This is a paragraph</p>
+    <div>This text is inside a div</div>
+    <div id="box" style="width:400px; height:300px; border:1px solid rgb(102,102,102);">
+        <p class="demo1">This is the first paragraph</p>
+        <h2 class="demo1">This is a heading</h2>
+        <p>This is the second paragraph</p>
+        <p>This is the third paragraph</p>
+        <p>This is the fourth paragraph</p>
+    </div>
+    <input type="button" value="click here" class="b1">
+    <br><br><br>
+    <table style="border:1px solid rgb(255,102,0); width:400px; height:auto;">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td>Riya</td>
+            <td>28</td>
+            <td>Graphics</td>
+        </tr>
+        <tr>
+            <td>Sohail</td>
+            <td>25</td>
+            <td>Web</td>
+        </tr>
+        <tr>
+            <td>Avin</td>
+            <td>23</td>
+            <td>IT Skills</td>
+        </tr>
+    </table>
+
+    <!-- <input type="button" value="hide all"> -->
+    <script>
+        $(document).ready(function() {
+            $("#p1").mouseenter(function() {
+                $(this).hide();
+            });
+
+            $("#nm").focus(function() {
+                $(this).css("background-color","blue");
+            });
+            $("#nm").blur(function() {
+                $(this).css("background-color","white");
+            });
+            $(".b1").click(function() {
+                $(".demo1").css("background-color","red");
+            });
+            $("p:first").css("text-decoration","underline");
+            $("p:first-child").css("font-style","italic");
+            $("p:nth-of-type(2)").css("background-color","yellow");
+            // $("tr:even").css("background-color","yellow");
+            $("tr:odd").css("background-color","aqua");
+            // $(":button").click(function() {
+            //     $("*").hide();
+            // });
+        });
+    </script>
+</body>
+</html>

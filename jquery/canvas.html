@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drawing on Canvas using Javascript</title>
+    <style>
+        #can {
+            width: 800px;
+            height: 600px;
+            border: 1px solid rgb(204, 204, 204);
+            background-color: rgb(255, 255, 204);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can">
+
+    </canvas>
+    <script>
+        var mycanvas = document.getElementById("can");
+        var draw = mycanvas.getContext("2d");
+        
+        draw.beginPath();
+        draw.moveTo(20,10);
+        draw.lineTo(100,50);
+        draw.strokeStyle = "red";
+        draw.lineWidth = "2";
+        draw.stroke();
+
+        draw.beginPath();
+        draw.moveTo(70,100);
+        draw.lineTo(150,100);
+        draw.lineTo(150,150);
+        draw.strokeStyle = "blue";
+        draw.lineWidth = "1";
+        draw.stroke();
+
+        draw.beginPath();
+        draw.fillStyle = "aqua";
+        draw.fillRect(100,20,80,50);
+        draw.fill();
+
+        draw.beginPath();
+        draw.fillStyle = "green"
+        draw.arc(50,50,30,0,2*Math.PI);
+        draw.fill();
+
+        draw.beginPath();
+        draw.arc(100,100,40,0,1*Math.PI,true);
+        draw.strokeStyle = "gold";
+        draw.stroke();
+
+        var x = 100;
+        var y = 80;
+        draw.beginPath();
+        draw.lineWidth = "1";
+        draw.strokeStyle = "blue";
+        draw.strokeText("APTECH",x,y);
+        draw.font = "Arial 32pt";
+        draw.textAlign = "center";
+
+        var grad = draw.createLinearGradient(0,40,10,100);
+        grad.addColorStop(0,"red");
+        grad.addColorStop(0.5,"yellow");
+        grad.addColorStop(1,"green");
+        draw.fillStyle =grad;
+        draw.fillRect(100,20,152,50);
+        draw.fill();
+
+    </script>
+</body>
+</html>

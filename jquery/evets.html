@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Events</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <p id="demo1">Place your mouse on the paragraph</p>
+    <hr>
+    <div id="box" style="width:300px; height:200px; border:1px solid rgb(51,102,51);">
+        
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("#demo1").hover(function() {
+                alert("your have place your mouse");
+            },
+            function() {
+                alert("you have moved your mouse")
+            });
+            $("#box").on({
+                mouseenter:function() {
+                    $(this).css("background-color" ,"aqua");
+                },
+                mouseleave:function() {
+                    $(this).css("background-color","teal");
+                },
+                click:function() {
+                    $(this).css("background-color","yellow");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

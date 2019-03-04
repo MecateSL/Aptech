@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regular Expressions</title>
+</head>
+<body>
+    <p>A regular expression is a sequence of characters that forms a search pattern. When you search for a data you can use this pattern.</p>
+
+    <label for="empid">Enter your Employee ID:</label>
+    <input type="text" id="empid">
+    <input type="button" value="submit" onclick="employee()">
+
+    <script>
+        function employee() {
+            var emp = document.getElementById("empid").value;
+            var empattern = /apt\d{5}$/i;
+            var x = empattern.exec(emp);
+            if(x!=null) {
+                alert("Welcome to Employee portal");
+            }
+            else {
+                alert("Invalid ID")
+            }
+        }
+    </script>
+</body>
+</html>

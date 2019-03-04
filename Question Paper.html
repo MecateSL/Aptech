@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Question Paper</title>
+        <link rel="stylesheet" href="CSS/qp_style.css">
+    </head>
+    <body style="background-image:url(../img/leon.jpeg);background-repeat: no-repeat;background-size: cover">
+        <h1>Question Paper</h1>
+        <h2>1. Create a form with the following elements:</h2>
+        <ol>
+            <li>Name field</li>
+            <li>Age</li>
+            <li>Address</li>
+            <li>Gender</li>
+            <li>Date of Birth</li>
+            <li>Country (select field)</li>
+            <li>Choose Subject (check boxes)</li>
+            <li>Submit and Reset Button</li>
+        </ol>
+        <form name="form" method="POST" action="">
+            <table>
+                <tr>
+                    <td>Name field:</td>
+                    <td> <input type="text" placeholder="Full Name" required> </td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" placeholder="Age" min="25" max="45" required> </td>
+                </tr>
+                <tr>
+                    <td>Address:</td>
+                    <td><textarea cols="21" rows="5" required></textarea></td>
+                </tr>
+                <tr>
+                    <td>Gender:</td>
+                    <td>
+                        <input type="radio" name="course" value="m">Male
+                        <input type="radio" name="course" value="f">Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date of Birth:</td>
+                    <td><input type="date" required></td>
+                </tr>
+                <tr>
+                    <td>Country:</td>
+                    <td>
+                        <select id="country">
+                            <option value="Nicaragua">Nicaragua</option>
+                            <option value="India">India</option>
+                            <option value="Tajikistán">Tajikistán</option>
+                            <option value="Bután">Bután</option>
+                            <option selected>--select--</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Choose Subject:</td>
+                    <td>
+                        <input type="checkbox" name="subject" value="gwd">Graphicland Web Design
+                        <br>
+                        <input type="checkbox" name="subject" value="awd">Advance Web Design
+                        <br>
+                        <input type="checkbox" name="subject" value="gd">Graphic Design
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <h2>2. Use internal CSS to apply background image to your page </h2>
+        <p>✔</p>
+        <h2>3. Create a Marquee using HTML Marquee Tag</h2>
+        <marquee direction="right">This is a marquee Text</marquee>
+        <h2>3. Using External CSS and HTML div tags create the Following design</h2>
+        <div class="container">
+            <div class="header"><strong><p>Header</p></strong></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#" class="border">About Us</a></li>
+                    <li><a href="#" class="border">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="img">
+                <img src="../img/penitas.jpeg" alt="Las Peñitas, León, Nicaragua">
+            </div>
+        </div>
+    </body>
+</html>

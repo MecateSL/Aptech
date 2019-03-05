@@ -30,7 +30,24 @@
     <div id="c3" style="background-color:rgb(255, 204, 0); width:300px; height:20px; padding: 10px; text-align: center; cursor: pointer;">Slide Toggle</div>
     <br>
     <div class="box3" style="background-color:rgb(153,153,153); width:300px; height:300px;"></div>
-
+    <br><br>
+    <hr>
+    <br>
+    <input type="button" value="Animate" id="d1">
+    <div class="box4" style="background-color:rgb(153,102,204); width:100px; height:100px; border:1px solid rgb(153, 0, 204);position: relative;">jQuery Animation</div>
+    <br>
+    <br>
+    <hr>
+    <br>
+    <input type="button" value="Click to animate" id="d2">
+    <div class="box5" style="background-color:rgb(0,51,204); width:50px; height:50px; border:1px solid rgb(0,102,0);position: relative;">Animate</div>
+    <br>
+    <hr>
+    <br>
+    <input type="button" value="Toggle" id="e1">
+    <div class="box6" style="width:200px;height:100px;background-color:rgb(0, 102, 255);color:white;">Animation</div>
+    <br>
+    <br>
     <script>
         $(document).ready(function(e) {
             $("#b1").click(function() {
@@ -63,6 +80,15 @@
             $("#c3").click(function() {
                 $(".box3").slideToggle();
             });
+            $("#d1").click(function() {
+                $(".box4").animate({width:"200px",height:"200px",left:"250px",top:"250px",fontSize:"20px"},3000);
+            });
+            $("#d2").click(function() {
+                $(".box5").animate({width:"+=20px",height:"+=20px",left:"+=30px",top:"+=30px",fontSize:"+=5px"},1000);
+            });
+            $("#e1").click(function() {
+                $(".box6").animate({width:"toggle"})
+            })
         });
     </script>
 </body>

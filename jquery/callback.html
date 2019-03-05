@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callback function</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <P>A callback function is executed after the current effect is completly finished. Javascript statements are executed line by line. However with effects, the next line of code can be run even thought the effect is not finished. This can cause errors, to prevent the errors you can create a callback function.</P>
+
+    <div class="demo" style="width:300px;height:100px;background-color:rgb(255, 255, 0);text-align: center">This is a box</div>
+    <input type="button" value="Hide" id="b1">
+
+    <script>
+        $(document).ready(function(e) {
+            $("#b1").click(function() {
+                $(".demo").hide("slow",function() {
+                alert("The box is hidden");
+                });
+            });
+        });
+    </script>
+</body>
+</html>

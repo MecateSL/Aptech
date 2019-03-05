@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Get and Set Contents</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>jQuery methods can be used to either assign or read some value of a selector. A few these methods are text(), html(), attr(), and val(). When these methods are called with no argument it is referred as getters, because it gets (or reads) the values of the element. When these methods are called with a value as an argument it is referred as a setter because it sets (or assign) that value</p>
+
+    <h3>This is a heading</h3>
+    <h3 class="demo1">This is another heading</h3>
+    <input type="button" value="Get Headings" id="g1">
+    <input type="button" value="Get demo heading" id="g2">
+    <input type="button" value="Set first heading" id="g3">
+    <input type="button" value="Set second heading" id="g4">
+    <br>
+    <br>
+    <hr>
+    <br>
+    <div class="container" style="width:300px;height:200px;border:1px solid rgb(51,51,51);">
+        <h1>Main Heading</h1>
+        <p>This is a <strong>paragraph</strong></p>
+    </div>
+    <input type="button" value="get 1" id="b1">
+    <input type="button" value="get" id="b2">
+    <input type="button" value="Set HTML" id="b3">
+    <br>
+    <br>
+    <hr>
+    <br>
+    <img src="../../img/leon.jpeg" alt="leon" id="myimg" width="400" height="auto">
+    <br>
+    <br>
+    <input type="button" value="Get img" id="m1">
+    <input type="button" value="Get img" id="m2">
+    <br><br><hr><br>
+    <label for="n1">Enter name:</label>
+    <input type="text" id="n1">
+    <br><br>
+    <input type="button" value="Submit" id="t1">
+    <input type="button" value="Cristian Rojas" id="t2">
+
+    <script>
+        $(document).ready(function(e) {
+            $("#g1").click(function() {
+                var txt = $("h3:first").text();
+                alert(txt);
+            });
+            $("#g2").click(function() {
+                var txt1 = $("h3.demo1").text();
+                alert(txt1);
+            });
+            $("#g3").click(function() {
+                $("h3:first").text("This heading has changed");
+            });
+            $("#g4").click(function() {
+                $("h3.demo1").text("This heading has also changed");
+            });
+            $("#b1").click(function() {
+                var one = $("h1").html();
+                alert(one);
+            });
+            $("#b2").click(function() {
+                var cont = $(".container").html();
+                alert(cont);
+            });
+            $("#b3").click(function() {
+                $(".container").html("<h2>This heading is new</h2>");
+            });
+            $("#m1").click(function() {
+                var image = $("#myimg").attr("src");
+                alert(image);
+            });
+            $("#m2").click(function() {
+                $("#myimg").attr("src","../../img/sunset.jpg");
+            });
+            $("#t1").click(function() {
+                var name = $("#n1").val();
+                alert("Welcome "+name);
+            });
+            $("#t2").click(function() {
+                var name = $("#t2").val();
+                $("#n1").val(name);
+            });
+        });
+    </script>
+</body>
+</html>

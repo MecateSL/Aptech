@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Inser Using Before</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #box {
+            width: 80%;
+            height: auto;
+            padding: 10px;
+            margin: 0 auto;
+            border: 1px solid rgb(0, 51, 102);
+        }
+        h1 {
+            display: inline-block;
+        }
+        body {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is the heading of the page</h1>
+    <hr>
+    <input type="button" value="Before" id="b1">
+    <input type="button" value="After" id="b2">
+    <hr>
+    <div id="box">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium in deserunt, mollitia nobis iusto aliquam eum deleniti asperiores quasi necessitatibus dolorum quia quod consequuntur delectus officia et voluptatem architecto hic.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(e) {
+            $('#box').after('<h3>--The end of content--</h3>');
+            $('#box').before('<h3>--The start of content--</h3>');
+            $('#b1').click(function() {
+                $('h1').before('<img src="../../img/leon.jpeg" width="50"/>');
+            });
+            $('#b2').click(function() {
+                $('h1').after('<img src="../../img/leon.jpeg" width="50"/>');
+            });
+        });
+    </script>
+</body>
+</html>

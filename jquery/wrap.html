@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Wrap Methods</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .wrapper {
+            padding: 20px;
+            background-color: rgb(0, 102, 102);
+            margin: 10px;
+        }
+
+        .container {
+            background-color: rgb(255, 204, 51);
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur, rem. Impedit harum laborum perferendis repellendus optio, odit, quidem minus eaque facilis porro quis animi consectetur hic dolorem tempora? Nobis, inventore?</p>
+        <p>The jQuery wrap() method is used to wrap (duh!) an HTML structure around the selector element.</p>
+    </div>
+    <input type="button" value="wrap" id="b1">
+
+    <script>
+        $(document).ready(function(e) {
+            $('#b1').click(function() {
+                $('.container').wrap('<div class="wrapper"></div>');
+                $('p').contents().wrap('<em><strong></strong></em>');
+            });
+        });
+    </script>
+</body>
+</html>

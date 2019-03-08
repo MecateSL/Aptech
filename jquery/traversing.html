@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Traversing</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .box * {
+            border: 1px solid rgb(153, 153, 153);
+            padding: 10px;
+            margin: 10px;
+            display: block;
+        }
+
+        .box1 * {
+            border: 1px solid rgb(0,102,255);
+            padding: 10px;
+            margin: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <p>jQuery Traversing means move through, it allows us to find or select elements based on the relation to other elements. Start with one selection and move through that selection until you reach the element you desire.</p>
+    <div class="box">
+        <h1>This is a heading</h1>
+        <p>This is a paragraph</p>
+        <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>
+                <span>Item Three</span>
+            </li>
+        </ul>
+    </div>
+    <div class="box1">
+        <p>This is a paragraph</p>
+        <p><span>This is the second</span></p>
+        <p class="selected">And this the selected one</p>
+    </div>
+    <script>
+        $(document).ready(function(e) {
+            $('span').parent().css('border','1px solid red');
+            $('.box1').find('span').css('border','1px solid green');
+        });
+    </script>
+</body>
+</html>

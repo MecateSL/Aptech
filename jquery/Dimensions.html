@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Dimensions</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        #box{
+            width: 400px;
+            height: 300px;
+            padding: 20px;
+            border: 5px solid rgb(255, 153, 0);
+            background-color: rgb(255, 255, 204);
+            margin: 10px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>This is the content area</h1>
+    </div>
+    <input type="button" value="dimensions" id="b1">
+    <input type="button" value="inner dimensions" id="b2">
+    <input type="button" value="outer dimensions" id="b3">
+    <input type="button" value="complete dimensions" id="b4">
+    <input type="button" value="change dimensions" id="b5">
+    <p id="result1"></p>
+    <p id="result2"></p>
+    <p id="result3"></p>
+    <p id="result4"></p>
+    <script>
+        $(document).ready(function(e) {
+            $('#b1').click(function() {
+                var boxwidth = $('#box').width();
+                var boxheight = $('#box').height();
+                $('#result1').html(`Width: ${boxwidth} and Height: ${boxheight}`);
+            });
+            $('#b2').click(function() {
+                var boxwidth = $('#box').innerWidth();
+                var boxheight = $('#box').innerHeight();
+                $('#result2').html(`Inner Width: ${boxwidth} and Inner Height: ${boxheight}`);
+            });
+            $('#b3').click(function() {
+                var boxwidth = $('#box').outerWidth();
+                var boxheight = $('#box').outerHeight();
+                $('#result3').html(`Outer Width: ${boxwidth} and Outer Height: ${boxheight}`);
+            });
+            $('#b4').click(function() {
+                var boxwidth = $('#box').outerWidth(true);
+                var boxheight = $('#box').outerHeight(true);
+                $('#result4').html(`Complete Width: ${boxwidth} and Complete Height: ${boxheight}`);
+            });
+            $('#b5').click(function() {
+                $('#box').width(500);
+                $('#box').height(600);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Insert Content</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>jQuery provides several methods like append(), prepend(), html(), text(), before(), after(), wrap(), etc that allows us to insert new content inside an existing element</p>
+
+    <div id="container" style="width:80%; height:auto; border:1px solid rgb(51,51,51);">
+        <p class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis saepe rerum, eius maxime quae corporis quas aspernatur nihil quos, odio possimus? Perspiciatis ut quidem, ipsam sunt at eos aliquam.</p>
+        <p class="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi omnis saepe rerum, eius maxime quae corporis quas aspernatur nihil quos, odio possimus? Perspiciatis ut quidem, ipsam sunt at eos aliquam.</p>
+    </div>
+
+    <input type="button" value="Append" id="b1">
+    <input type="button" value="Prepend" id="b2">
+
+    <script>
+        $(document).ready(function(e) {
+            $("p.demo").append(' <a href="#">read more...</a>');
+            $("p.demo").prepend('<strong>Important</strong> ');
+
+            var newhead = '<h1> The End of Content</h1>';
+            var newpar = document.createElement('p');
+            newpar.innerHTML = 'This is a new paragraph';
+            var newimage = $('<img src="../../img/leon.jpeg" width="200" height="100" alt="leon"/>');
+
+            $("#b1").click(function() {
+                $("#container").append(newhead,newpar,newimage);
+            });
+
+            var head2 = '<h1> introduction</h1>';
+            var par = document.createElement('p');
+            par.innerHTML = '<em>This is a sub heading</em>';
+            $('#b2').click(function() {
+                $('#container').prepend(head2,par);
+            })
+        });
+    </script>
+</body>
+</html>

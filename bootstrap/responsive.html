@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <!-- <link rel="stylesheet" href="CSS/bootstyle.css"> -->
+            <title>Responsive site using Bootstrap</title>
+            <style>
+                .carousel-inner img {
+                    width: 100%;
+                    height: 900px!important; 
+                    margin: auto;
+                }
+                .box {
+                    padding: 40px 80px;
+                    background-color: rgb(143, 143, 143)
+                }
+                .column img {
+                    border: 3px solid rgb(255, 255, 255);
+                    margin: 20px;
+                    box-shadow: 0 0 10px rgb(51, 51, 51);
+                }
+                .column h3 {
+                    color: rgb(0, 0, 0);
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    font-weight: bold;
+                }
+                .clients {
+                    padding: 50px 100px;
+                }
+                .foricon {
+                    font-size: 200px;
+                }
+                .info span {
+                    font-size: 40px;
+                    color: rgb(253, 255, 253);
+                }
+
+            </style>
+        </head>
+            
+        <body id="mypage" data-spy="scroll" data-target=".navbar" data-offset="40">
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" data-toggle="collapse" data-target="mynavbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#mypage" class="navbar-brand">Mecate Productions</a>
+                        <div class="collapse navbar-collapse" id="mynavbar">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#mypage">Home</a></li>
+                                <li><a href="#about">About Us</a></li>
+                                <li><a href="#clients">Our Clients</a></li>
+                                <li><a href="#team">Our Team</a></li>
+                                <li><a href="#media">Media</a></li>
+                                <li><a href="#moreinfo">More Info</a></li>
+                                <li><a href="#branches">Branches</a></li>
+                                <li><a href="#contacts">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="../../img/beach.jpg" alt="beach" width="1200" height="700">
+                        <div class="carousel-caption">
+                            <h3>Gateway of India</h3>
+                            <p>The Gateway of India is bla bla bla...</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../img/leon.jpeg" alt="leon" width="1200" height="700">
+                        <div class="carousel-caption">
+                            <h3>Gateway of India</h3>
+                            <p>The Gateway of India is bla bla bla...</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../img/penitas.jpeg" alt="leon" width="1200" height="700">
+                        <div class="carousel-caption">
+                            <h3>Gateway of India</h3>
+                            <p>The Gateway of India is bla bla bla...</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="../../img/san-juan.jpg" alt="leon" width="1200" height="700">
+                        <div class="carousel-caption">
+                            <h3>Gateway of India</h3>
+                            <p>The Gateway of India is bla bla bla...</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="#myCarousel" role="button" data-slide="prev" class="left carousel-control">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a  role="button" data-slide="next" class="right carousel-control"href="#myCarousel">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="container-fluid text-center box">
+                <h1>Mecate Productions</h1>
+                <p><em>Subtitle</em></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus voluptates eaque ex dolorum sint ad, soluta vero repudiandae atque fuga rem ab ut quae modi! Corporis tenetur dolorum quisquam impedit!</p>
+                <div class="row column">
+                    <div class="col-sm-3">
+                        <h3>Introduction</h3>
+                        <img src="../../img/beach.jpg" class="img-circle" alt="" width="250" height="250">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fugit necessitatibus quibusdam officiis, mollitia eaque quod! Impedit vel, quibusdam doloremque consectetur iure possimus quos, eveniet exercitationem assumenda enim soluta quaerat.</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Mision</h3>
+                        <img src="../../img/leon.jpeg" class="img-circle" alt="" width="250" height="250">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fugit necessitatibus quibusdam officiis, mollitia eaque quod! Impedit vel, quibusdam doloremque consectetur iure possimus quos, eveniet exercitationem assumenda enim soluta quaerat.</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>About Us</h3>
+                        <img src="../../img/penitas.jpeg" class="img-circle" alt="" width="250" height="250">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fugit necessitatibus quibusdam officiis, mollitia eaque quod! Impedit vel, quibusdam doloremque consectetur iure possimus quos, eveniet exercitationem assumenda enim soluta quaerat.</p>
+                    </div>
+                    <div class="col-sm-3">
+                        <h3>Contact</h3>
+                        <img src="../../img/san-juan.jpg" class="img-circle" alt="" width="250" height="250">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo fugit necessitatibus quibusdam officiis, mollitia eaque quod! Impedit vel, quibusdam doloremque consectetur iure possimus quos, eveniet exercitationem assumenda enim soluta quaerat.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid text-center clients" id="team">
+                <h1>People with whom we are working with</h1>
+                <div class="row ">
+                    <div class="col-sm-7 text-justify">
+                        <h3>Our Team</h3>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi ut accusamus, facilis consequuntur harum quia nulla, officia eius, possimus explicabo exercitationem veniam quo rerum unde debitis dolores mollitia itaque adipisci!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est vero sit voluptas temporibus corporis error eos autem debitis molestias doloribus. Eligendi excepturi sunt a accusantium. Officiis, itaque? Quos, corporis alias.</p>
+                        <button type="button" class="btn btn-primary">Read More</button>
+                    </div>
+                    <div class="col-sm-5 foricon">
+                        <span class="glyphicon glyphicon-user"></span>
+                    </div>
+                </div>
+                <div class="container-fluid box text-center">
+                    <h1>Our Team </h1>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h1>Nistha Joshie</h1>
+                            <div class="thumbnail">
+                                <a href="#name1" data-toggle="collapse">
+                                    <img src="../../img/beach.jpg" alt="beach">
+                                </a>
+                                <div id="name1" class="collapse">
+                                    <p>text</p>
+                                    <p>paragraph</p>
+                                    <p>More text</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1>Arjun Bakshi</h1>
+                            <div class="thumbnail">
+                                <a href="#name2" data-toggle="collapse">
+                                    <img src="../../img/leon.jpeg" alt="">
+                                </a>
+                                <div id="name2" class="collapse">
+                                    <h3>Job Title</h3>
+                                    <p>Text</p>
+                                    <p>Paragraph</p>
+                                    <p>More text etc</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <h1>Alokika Chowdhary</h1>
+                            <div class="thumbnail">
+                                <a href="#name3" data-toggle="collapse"><img src="../../img/penitas.jpeg" alt=""></a>
+                                <div id="name3" class="collapse">
+                                    <h3>Job Title</h3>
+                                    <h3>Job Title</h3>
+                                    <p>Another text</p>
+                                    <p>and paragraph</p>
+                                    <p> bla bla bla...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid clients" id="media">
+                <h1 class="text-center">Inserting video</h1>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="../../test"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <h3>Working with Videos</h3>
+                        <blockquote>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente sunt officiis repellat quis debitis perferendis neque labore eos veritatis dolorem. Porro necessitatibus, asperiores molestias eius nostrum facilis eligendi optio dolor.</p>
+                            <footer>
+                                Mecate
+                            </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid box text-center" id="moreinfo">
+                <h1>Working with Bootstrap modal</h1>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src="../../img/FullSizeRender-1024x684.jpg" alt="" class="img-circle" width="200" height="200">
+                        <h3>Item One</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut provident magni voluptatem commodi assumenda modi iusto, molestiae alias facere quod, quasi saepe? Quasi inventore, incidunt consectetur nobis expedita mollitia sit?</p>
+                        <button class="btn" data-toggle="modal" data-target="#newmodal"> More Details </button>
+                        <div class="modal fade" id="newmodal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal">&times;</button>
+                                        <h3>More Information</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Header</h4>
+                                        <img src="../../img/Sunset-on-Telica-Volcano-Me.jpeg" alt="" width="250" height="200">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolore, quae labore quis cumque sint nulla nemo voluptatem nesciunt id, cum delectus error tempora vitae aut at dolorem cupiditate ipsum.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="../../img/DSC00238-1024x683.jpg" alt="" class="img-circle" width="200" height="200">
+                        <h3>Item One</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut provident magni voluptatem commodi assumenda modi iusto, molestiae alias facere quod, quasi saepe? Quasi inventore, incidunt consectetur nobis expedita mollitia sit?</p>
+                        <button class="btn" data-toggle="modal" data-target="#newmodal2"> More Details </button>
+                        <div class="modal fade" id="newmodal2" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal">&times;</button>
+                                        <h3>More Information</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Header</h4>
+                                        <img src="../../img/Sunset-on-Telica-Volcano-Me.jpeg" alt="" width="250" height="200">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolore, quae labore quis cumque sint nulla nemo voluptatem nesciunt id, cum delectus error tempora vitae aut at dolorem cupiditate ipsum.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="../../img/DSC00403-1024x683.jpg" alt="" class="img-circle" width="200" height="200">
+                        <h3>Item One</h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut provident magni voluptatem commodi assumenda modi iusto, molestiae alias facere quod, quasi saepe? Quasi inventore, incidunt consectetur nobis expedita mollitia sit?</p>
+                        <button class="btn" data-toggle="modal3" data-target="#newmoda3"> More Details </button>
+                        <div class="modal fade" id="newmoda3" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button class="close" data-dismiss="modal3">&times;</button>
+                                        <h3>More Information</h3>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h4>Header</h4>
+                                        <img src="../../img/Sunset-on-Telica-Volcano-Me.jpeg" alt="" width="250" height="200">
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt dolore, quae labore quis cumque sint nulla nemo voluptatem nesciunt id, cum delectus error tempora vitae aut at dolorem cupiditate ipsum.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-danger" data-dismiss="modal3">Cancel</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluids clients" id="branches">
+                <div class="text-center">
+                    <h1>Working with tabbed panel in Bootstrap</h1>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab1">Menu one</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#tab2">Menu two</a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#tab3">Menu three</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane fade in active">
+                        <h2>Sandwiches</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, cumque porro delectus molestiae amet ut culpa tenetur aut mollitia quidem perspiciatis obcaecati, magnam reiciendis, suscipit soluta autem recusandae nihil quisquam.</p>
+                    </div>
+                    <div id="tab2" class="tab-pane fade in">
+                        <h2>Hamburguers</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, cumque porro delectus molestiae amet ut culpa tenetur aut mollitia quidem perspiciatis obcaecati, magnam reiciendis, suscipit soluta autem recusandae nihil quisquam.</p>
+                    </div>
+                    <div id="tab3" class="tab-pane fade in">
+                        <h2>Pizza</h2>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore, cumque porro delectus molestiae amet ut culpa tenetur aut mollitia quidem perspiciatis obcaecati, magnam reiciendis, suscipit soluta autem recusandae nihil quisquam.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid box info" id="contacts">
+                <div class="text-center">
+                    <h1>Contact Us</h1>
+                </div>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h1>Contact Information</h1>
+                        <p><span class="glyphicon glyphicon-map-marker"></span>Lajpat Nagar <br> New Delhi</p>
+                        <p><span class="glyphicon glyphicon-phone"></span><br> Tel: 7585-6545</p>
+                        <p><span class="glyphicon glyphicon-envelope"></span><br>Email: info@aptech.ac.in</p>
+
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <label for="username">Name:</label>
+                            <input type="text" class="form-control" id="usename" name="username" placeholder="Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="mail">Mail:</label>
+                            <input type="email" name="mail" id="mail" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Comments</label>
+                            <textarea class="form-control" name="comment" id="comment" rows="5" required></textarea>
+                        </div>
+                        <button class="btn" type="submit">Send</button>
+                    </div>
+                </div>
+            </div>
+            <footer class="text-center">
+                <a href="#mypage" data-toggle="tooltip" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                <p>This site was designed(?) by Mecate</p>
+                <p>Add me on <a href="https://www.facebook.com/mecatesl" data-toggle="tooltip" title="Mecate"><span class="glyphicon glyphicon-share"></span></span>Facebook</a></p>
+            </footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script>
+                $(document).ready(function(e) {
+                    $('[data-toggle="tooltip"]').tooltip();
+                    $('.navbar a, footer a[href="#mypage"]').on('click',function(event) {
+                        if(this.hash !=="") {
+                            event.preventDefault();
+                            var hash = this.hash;
+                            $('html,body').animate({
+                                scrollTop:$(hash).offset().top},
+                                800,function(){
+                                    window.location.hash = hash;
+                            });
+                        };
+                    });
+                });
+            </script>
+        </body>
+    </html>

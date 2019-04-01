@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>WOrking with Bootsrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+        .special {
+            background-color: rgb(0,51,102);
+            color: rgb(255, 255, 255);
+            padding: 40px 80px;
+        }
+        .fortext {
+            color: rgb(51, 51, 51);
+        }
+        .foricon {
+            text-align: center;
+            font-size: 100px;
+        }
+
+        .fortab {
+            background-color:rgb(194, 194, 194);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-bottom" id="mynavbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <h3 style="color: rgb(233, 233, 233)">
+                    Your Company Name
+                </h3>
+            </div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active">
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">About Us</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="jumbotron special">
+            <h1>Your Company name</h1>
+            <p>Jumbotron is a container used for giving importance to your text</p>
+            <p>The text appears bigger in jumbotron container</p>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Working with images</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="../../img/leon.jpeg" alt="catedral leon" class="img-circle img-responsive">
+            </div>
+            <div class="col-sm-4">
+                <img src="../../img/penitas.jpeg" alt="catedral leon" class="img-rounded img-responsive">
+            </div>
+            <div class="col-sm-4">
+                <img src="../../img/sunset.jpg" alt="catedral leon" class="img-thumbnail img-responsive">
+                <p>This is a thumbnail image so you can add text at the bottom of the image.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid special">
+        <div class="row text-center fortext">
+            <div class="col-sm-3">
+                <div class="well well-sm">
+                    <h2>Introduction</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae alias id? Unde dolores hic provident laudantium possimus nobis distinctio. Tenetur consequuntur nulla necessitatibus excepturi doloremque vel error harum quae.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi amet dicta officia vel quis facere molestiae, eum dolorum numquam non, dolorem sunt deleniti! Odit quisquam dicta ad, enim neque quas.</p>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="well well-lg">
+                    <h2>Heading 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, repellendus dolorum quia delectus dolore neque vero quasi error explicabo aliquam provident minima quidem, iste quam vitae laboriosam necessitatibus fugiat consectetur?</p>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="well well-sm">
+                    <h2>Introduction</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque molestiae alias id? Unde dolores hic provident laudantium possimus nobis distinctio. Tenetur consequuntur nulla necessitatibus excepturi doloremque vel error harum quae.</p>
+                    <div class="alert alert-success alert-dismissable">
+                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                        <strong>
+                            It is added to give special atention to your
+                        </strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-7">
+                <h2>Working with bootstrap Glyphicons</h2>
+                <button type="button" class="btn btn-primary">
+                    <span class="glyphicon glyphicon-alert foricon"></span>
+                </button>
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-play"></span>
+                </button>
+                <div class="btn-group">
+                    <a href="#" class="btn btn-primary">Home</a>
+                    <a href="#" class="btn btn-primary">About</a>
+                    <a href="#" class="btn btn-primary">Contact</a>
+                </div>
+            </div>
+            <div class="col-sm-5 foricon">
+                <span class="glyphicon glyphicon-alert"></span>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid special">
+        <div class="row fortext">
+            <div class="col-sm-6">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading">
+                        <h2>Working with panels</h2>
+                    </div>
+                    <div class="panel panel-body">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minima repellendus mollitia quis officiis, omnis corporis! A aspernatur nostrum beatae cupiditate ut est laborum! Accusantium hic dicta rem atque omnis nobis.</p>
+                    </div>                    
+                </div>
+            </div>
+            <div class="col-sm-6 fortab">
+                <h2>Tabbed Panel</h2>
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="active" role="presentation">
+                        <a data-toggle="tab" href="#menu1" role="tab" aria-controls="menu1">Menu 1</a>
+                    </li>
+                    <li role="presentation">
+                        <a data-toggle="tab" role="tab" aria-controls="menu2" href="#menu2">Menu 2</a>
+                    </li>
+                    <li role="presentation">
+                        <a data-toggle="tab" href="#menu3" role="tab" aria-controls="menu3">Menu 3</a>
+                    </li>
+                </ul>
+                <div class="tab-content" >
+                    <div class="tab-pane fade in active" role="tabpanel" id="menu1">
+                        <h3>Content of Menu 1</h3>
+                        <p>This is some paragraph for menu 1</p>
+                    </div>
+                    <div class="tab-pane fade" id="menu2">
+                        <h3>Content of menu 2</h3>
+                        <p>This is some paragraph for menu 2</p>
+                    </div>
+                    <div class="tab-pane fade" id="menu3">
+                        <h3>Content of menu 3</h3>
+                        <p>This is some paragraph for menu 3</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
